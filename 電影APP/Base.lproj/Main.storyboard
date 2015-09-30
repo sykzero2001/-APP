@@ -1,13 +1,288 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EUY-CN-Xm3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--簽名-->
+        <scene sceneID="gtq-Sh-y82">
+            <objects>
+                <viewController id="pJc-oR-CY9" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LRT-77-2uh"/>
+                        <viewControllerLayoutGuide type="bottom" id="yVq-lJ-Fgd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ca8-UG-7bs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pf-rO-NWA">
+                                <rect key="frame" x="39" y="80" width="521" height="115"/>
+                                <color key="backgroundColor" red="1" green="0.97019118569999996" blue="0.43871462109999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="858-FY-sbD"/>
+                                    <constraint firstAttribute="width" constant="338" id="MSn-ps-EI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MSn-ps-EI3"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPz-h0-DvN">
+                                <rect key="frame" x="159" y="28" width="60" height="30"/>
+                                <state key="normal" title="新增簽名"/>
+                                <connections>
+                                    <action selector="signbutton:" destination="pJc-oR-CY9" eventType="touchUpInside" id="juk-1A-w1g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElM-8H-Ivj">
+                                <rect key="frame" x="39" y="203" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.22110162950000001" blue="0.28382873069999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Lo-KO-Jeb">
+                                <rect key="frame" x="39" y="28" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="G6q-6X-fxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qPz-h0-DvN" firstAttribute="top" secondItem="LRT-77-2uh" secondAttribute="bottom" constant="8" id="0ae-Gj-sbm"/>
+                            <constraint firstItem="9Lo-KO-Jeb" firstAttribute="top" secondItem="LRT-77-2uh" secondAttribute="bottom" constant="8" id="A9T-0z-kEf"/>
+                            <constraint firstItem="ElM-8H-Ivj" firstAttribute="top" secondItem="9Pf-rO-NWA" secondAttribute="bottom" constant="8" id="JpV-Lu-Wu7"/>
+                            <constraint firstItem="ElM-8H-Ivj" firstAttribute="top" secondItem="9Pf-rO-NWA" secondAttribute="bottom" constant="8" id="Scj-Ba-2te"/>
+                            <constraint firstItem="ElM-8H-Ivj" firstAttribute="leading" secondItem="Ca8-UG-7bs" secondAttribute="leadingMargin" constant="19" id="WdH-UE-VGf"/>
+                            <constraint firstItem="9Lo-KO-Jeb" firstAttribute="leading" secondItem="Ca8-UG-7bs" secondAttribute="leadingMargin" constant="19" id="XRu-RN-CEO"/>
+                            <constraint firstItem="qPz-h0-DvN" firstAttribute="leading" secondItem="9Lo-KO-Jeb" secondAttribute="trailing" constant="20" id="YMI-gd-eaK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Pf-rO-NWA" secondAttribute="trailing" constant="20" id="YgJ-Xf-Fzh"/>
+                            <constraint firstItem="9Pf-rO-NWA" firstAttribute="top" secondItem="qPz-h0-DvN" secondAttribute="bottom" constant="22" id="nQ1-aA-u96"/>
+                            <constraint firstItem="9Pf-rO-NWA" firstAttribute="leading" secondItem="Ca8-UG-7bs" secondAttribute="leadingMargin" constant="19" id="rMe-eI-nqJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JpV-Lu-Wu7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="簽名" id="ys8-42-54H"/>
+                    <connections>
+                        <outlet property="signlabel" destination="9Pf-rO-NWA" id="YmK-MO-bt3"/>
+                        <outlet property="signtext" destination="9Lo-KO-Jeb" id="peF-Sk-IeL"/>
+                        <outlet property="warning" destination="ElM-8H-Ivj" id="Qjy-E2-EL8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZM2-Bc-p0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160" y="-52"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZMH-iI-uX0">
+            <objects>
+                <tabBarController id="EUY-CN-Xm3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="av2-Ra-Wb7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nH2-PX-d1b" kind="relationship" relationship="viewControllers" id="Buf-23-gGC"/>
+                        <segue destination="pJc-oR-CY9" kind="relationship" relationship="viewControllers" id="qMd-ax-uEB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvR-XA-Jaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="-396"/>
+        </scene>
+        <!--本週新片-->
+        <scene sceneID="744-4C-Ss3">
+            <objects>
+                <tableViewController id="Saq-zI-WwY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6yQ-fp-IK5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="goC-FA-BTz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="LEC-VM-xiT">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LEC-VM-xiT" id="Snq-cB-RsZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="129.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="電影app" translatesAutoresizingMaskIntoConstraints="NO" id="W6n-G6-qBb">
+                                                    <rect key="frame" x="27" y="1" width="103" height="128"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的少女時代" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cp-iU-nhb">
+                                                    <rect key="frame" x="155" y="18" width="116" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日期：2015-08-13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcc-qt-ux6">
+                                                    <rect key="frame" x="444.5" y="85" width="127.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mcc-qt-ux6" firstAttribute="top" secondItem="Snq-cB-RsZ" secondAttribute="topMargin" constant="77" id="RHg-5U-fD2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mcc-qt-ux6" secondAttribute="trailing" constant="20" id="h59-E7-jJD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="z0U-ge-Gq1" kind="show" id="wbx-gm-T0r"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="MWi-lI-hua">
+                                        <rect key="frame" x="0.0" y="194" width="600" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MWi-lI-hua" id="3UA-YE-9p6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="129.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="電影app" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-cI-hy2">
+                                                    <rect key="frame" x="27" y="1" width="103" height="128"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的少女時代" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-xl-Cay">
+                                                    <rect key="frame" x="155" y="18" width="116" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日期：2015-08-13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljS-SR-ovG">
+                                                    <rect key="frame" x="444.5" y="85" width="127.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ljS-SR-ovG" secondAttribute="trailing" constant="20" id="05r-62-bKO"/>
+                                                <constraint firstItem="ljS-SR-ovG" firstAttribute="top" secondItem="3UA-YE-9p6" secondAttribute="topMargin" constant="77" id="8p2-Ux-vsf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nUt-fK-BGc" kind="show" id="zyG-lP-ieB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Saq-zI-WwY" id="0vL-vc-xSg"/>
+                            <outlet property="delegate" destination="Saq-zI-WwY" id="B35-hc-CK3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="本週新片" id="Nv8-Ks-w3Y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWK-wO-AUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-765"/>
+        </scene>
+        <!--我的少女時代-->
+        <scene sceneID="fyA-VS-g1u">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="nUt-fK-BGc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IwS-UK-85O"/>
+                        <viewControllerLayoutGuide type="bottom" id="TBJ-2g-ak0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a7h-PS-w7k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkX-AR-wkT">
+                                <rect key="frame" x="30" y="76" width="540" height="467"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="電影app" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-pJ-YAU">
+                                        <rect key="frame" x="170" y="20" width="200" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="dAc-z4-IeA"/>
+                                            <constraint firstAttribute="height" constant="128" id="kND-SG-861"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Db9-rI-Sc7">
+                                        <rect key="frame" x="120" y="188" width="300" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="1fU-6F-5jL"/>
+                                            <constraint firstAttribute="height" constant="200" id="L7s-WM-Nnb"/>
+                                            <constraint firstAttribute="width" constant="300" id="VS0-Zu-qcg"/>
+                                        </constraints>
+                                        <string key="text">由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)</string>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="L7s-WM-Nnb"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Db9-rI-Sc7" firstAttribute="top" secondItem="QQY-pJ-YAU" secondAttribute="bottom" constant="40" id="Y7b-Lc-DKC"/>
+                                    <constraint firstItem="QQY-pJ-YAU" firstAttribute="centerX" secondItem="jkX-AR-wkT" secondAttribute="centerX" id="d9I-Zh-faq"/>
+                                    <constraint firstAttribute="height" constant="347" id="eDE-hZ-HGq"/>
+                                    <constraint firstAttribute="width" constant="295" id="kQo-cJ-zNg"/>
+                                    <constraint firstItem="QQY-pJ-YAU" firstAttribute="top" secondItem="jkX-AR-wkT" secondAttribute="top" constant="20" id="qdn-ki-EXP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Db9-rI-Sc7" secondAttribute="bottom" constant="45" id="toi-4k-ZKJ"/>
+                                    <constraint firstItem="Db9-rI-Sc7" firstAttribute="centerX" secondItem="jkX-AR-wkT" secondAttribute="centerX" id="veK-9q-elV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eDE-hZ-HGq"/>
+                                        <exclude reference="kQo-cJ-zNg"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jkX-AR-wkT" firstAttribute="leading" secondItem="a7h-PS-w7k" secondAttribute="leadingMargin" constant="10" id="F9s-Ei-Wzf"/>
+                            <constraint firstItem="jkX-AR-wkT" firstAttribute="top" secondItem="IwS-UK-85O" secondAttribute="bottom" constant="10" id="RKd-uo-Kh3"/>
+                            <constraint firstItem="TBJ-2g-ak0" firstAttribute="top" secondItem="jkX-AR-wkT" secondAttribute="bottom" constant="10" id="cgL-Gh-sLa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jkX-AR-wkT" secondAttribute="trailing" constant="10" id="ulP-p9-63P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的少女時代" id="97b-VR-NLq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zd7-CW-4xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="-30"/>
+        </scene>
+        <!--電影-->
+        <scene sceneID="wW9-T9-pr2">
+            <objects>
+                <navigationController id="nH2-PX-d1b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="電影" id="JAU-So-CzL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ipE-Z0-C8c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Saq-zI-WwY" kind="relationship" relationship="rootViewController" id="p5g-SJ-WMF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uR-FF-fYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="-757"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,6 +295,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-122" y="536"/>
+        </scene>
+        <!--我的少女時代-->
+        <scene sceneID="Ub7-Lq-TWZ">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="z0U-ge-Gq1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DKT-Fz-ek1"/>
+                        <viewControllerLayoutGuide type="bottom" id="z0j-k2-h4V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IaX-rX-cen">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKU-Bl-aFM">
+                                <rect key="frame" x="30" y="76" width="540" height="467"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="電影app" translatesAutoresizingMaskIntoConstraints="NO" id="MTn-Nl-lrh">
+                                        <rect key="frame" x="170" y="20" width="200" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="lHE-oj-wc7"/>
+                                            <constraint firstAttribute="width" constant="200" id="nZ8-Y8-lGw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjn-Fr-ZEh">
+                                        <rect key="frame" x="120" y="188" width="300" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="I4O-2H-eao"/>
+                                            <constraint firstAttribute="width" constant="300" id="JYJ-q3-kxa"/>
+                                            <constraint firstAttribute="height" constant="200" id="Xq6-6X-6Mg"/>
+                                        </constraints>
+                                        <string key="text">由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)由優質偶像劇(命中註定我愛你)</string>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Xq6-6X-6Mg"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sjn-Fr-ZEh" firstAttribute="centerX" secondItem="nKU-Bl-aFM" secondAttribute="centerX" id="E3y-d9-a0z"/>
+                                    <constraint firstItem="Sjn-Fr-ZEh" firstAttribute="top" secondItem="MTn-Nl-lrh" secondAttribute="bottom" constant="40" id="Fz4-2d-vAF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sjn-Fr-ZEh" secondAttribute="bottom" constant="45" id="MxF-dy-Kwo"/>
+                                    <constraint firstAttribute="height" constant="347" id="Xhn-rk-fI2"/>
+                                    <constraint firstAttribute="width" constant="295" id="aN1-EM-OVQ"/>
+                                    <constraint firstItem="MTn-Nl-lrh" firstAttribute="centerX" secondItem="nKU-Bl-aFM" secondAttribute="centerX" id="f6u-nf-0eu"/>
+                                    <constraint firstItem="MTn-Nl-lrh" firstAttribute="top" secondItem="nKU-Bl-aFM" secondAttribute="top" constant="20" id="qQD-2Z-cid"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xhn-rk-fI2"/>
+                                        <exclude reference="aN1-EM-OVQ"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z0j-k2-h4V" firstAttribute="top" secondItem="nKU-Bl-aFM" secondAttribute="bottom" constant="10" id="2aV-af-CYd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nKU-Bl-aFM" secondAttribute="trailing" constant="10" id="Aal-co-nKy"/>
+                            <constraint firstItem="nKU-Bl-aFM" firstAttribute="leading" secondItem="IaX-rX-cen" secondAttribute="leadingMargin" constant="10" id="BJz-b7-59o"/>
+                            <constraint firstItem="nKU-Bl-aFM" firstAttribute="top" secondItem="DKT-Fz-ek1" secondAttribute="bottom" constant="10" id="ava-vP-Lze"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的少女時代" id="e8s-4f-4vm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4Y-mq-i9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="-757"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="電影app" width="640" height="448"/>
+    </resources>
 </document>
